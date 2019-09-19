@@ -18,6 +18,10 @@ class StarSystem
     p @planets.find { |planet| planet.diameter > 140000 }
   end
 
+  def get_smallest_planet
+    p @planets.find { |planet| planet.diameter < 2500 }
+  end
+
 
 
 end
