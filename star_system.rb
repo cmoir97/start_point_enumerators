@@ -37,6 +37,9 @@ def get_number_of_planets_closer_than(distance)
   p number_of_planets.length
 end
 
+def get_total_number_of_moons
+  p @planets.reduce(0) { |sum, planet| sum + planet.number_of_moons }
+end
 
 
 end
