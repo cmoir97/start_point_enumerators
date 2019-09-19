@@ -32,24 +32,26 @@ class StarSystem
     p  planets_with_more_than_four_moons.map { |planet| planet.name}
   end
 
-def get_number_of_planets_closer_than(distance)
-  number_of_planets =  @planets.find_all { |planet| planet.distance_from_sun < distance }
-  p number_of_planets.length
-end
+  def get_number_of_planets_closer_than(distance)
+    number_of_planets =  @planets.find_all { |planet| planet.distance_from_sun < distance }
+    p number_of_planets.length
+  end
 
-def get_total_number_of_moons
-  p @planets.reduce(0) { |sum, planet| sum + planet.number_of_moons }
-end
+  def get_total_number_of_moons
+    p @planets.reduce(0) { |sum, planet| sum + planet.number_of_moons }
+  end
 
-def get_planet_names_sorted_by_increasing_distance_from_sun
- sorted_array = @planets.sort { |planet_a, planet_b| planet_a.distance_from_sun <=> planet_b.distance_from_sun }
- p  sorted_array.map { |planet| planet.name}
+  def get_planet_names_sorted_by_increasing_distance_from_sun
+    sorted_array = @planets.sort { |planet_a, planet_b| planet_a.distance_from_sun <=> planet_b.distance_from_sun }
+    p  sorted_array.map { |planet| planet.name}
 
-end
-
-
+  end
 
 
+  def get_planet_names_sorted_by_size_decreasing
+    sorted_array = @planets.sort { |planet_a, planet_b| planet_b.diameter <=> planet_a.diameter }
+    p  sorted_array.map { |planet| planet.name}
+  end
 
 
 
