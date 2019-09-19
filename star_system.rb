@@ -26,6 +26,11 @@ class StarSystem
     p @planets.find_all { |planet| planet.number_of_moons == 0}
   end
 
+  def get_planets_with_more_moons(moons)
+    planets_with_more_than_four_moons = @planets.find_all { |planet| planet.number_of_moons > moons}
+
+    p  planets_with_more_than_four_moons.map { |planet| planet.name}
+  end
 
 
 
