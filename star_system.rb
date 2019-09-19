@@ -6,5 +6,8 @@ class StarSystem
     @planets = planets
   end
 
+  def planet_names
+  p  @planets.map { |planet| planet.name}
+  end
 
 end
