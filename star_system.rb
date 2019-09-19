@@ -22,6 +22,11 @@ class StarSystem
     p @planets.find { |planet| planet.diameter < 2500 }
   end
 
+  def get_planets_with_no_moons
+    p @planets.find_all { |planet| planet.number_of_moons == 0}
+  end
+
+
 
 
 end
