@@ -41,5 +41,21 @@ def get_total_number_of_moons
   p @planets.reduce(0) { |sum, planet| sum + planet.number_of_moons }
 end
 
+def get_planet_names_sorted_by_increasing_distance_from_sun
+ sorted_array = @planets.sort { |planet_a, planet_b| planet_a.distance_from_sun <=> planet_b.distance_from_sun }
+ p  sorted_array.map { |planet| planet.name}
+
+end
+
+
+
+
+
+
+
+
+
+
+
 
 end
